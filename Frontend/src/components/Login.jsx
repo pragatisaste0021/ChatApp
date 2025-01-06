@@ -8,8 +8,7 @@ import toast from 'react-hot-toast'
 const Login = () => {
 
     const [authUser, setAuthUser] = useAuth();
-
-
+    
     const {
         register,
         handleSubmit,
