@@ -16,7 +16,7 @@ const Search = () => {
             return;
         }
         const conversation = allUsers.find((user) => user.fullname?.toLowerCase().includes(search.toLowerCase()));
-
+ 
         if(conversation){
             setSelectedConversation(conversation);
             setSearch("");
