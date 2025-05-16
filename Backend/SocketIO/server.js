@@ -25,11 +25,11 @@ const users = {};
 io.on("connection", (socket) => {
     console.log("A user connected", socket.id);
 
-    const userId = socket.handshake.query.userId;
+    const userId = socket.handshake.query.ujserId;
 
     if(userId){
         users[userId] = socket.id;
-        console.log("Users", users);
+        console.log("Users", users);j
     }
 
     // Used to send the events to all the connected users
