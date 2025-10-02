@@ -15,7 +15,7 @@ export const sendMessage=async(req, res) => {
         })
 
         if(!conversation){
-            conversation = Conversation.create({
+            conversation = await Conversation.create({
                 members: [senderId, receiverId],
             })
         }
@@ -23,6 +23,8 @@ export const sendMessage=async(req, res) => {
         const newMessage = new Message({
             senderId, receiverId, message
         })
+
+        console.log(newMessage._id);
 
         if(newMessage){
             conversation.messages.push(newMessage._id);

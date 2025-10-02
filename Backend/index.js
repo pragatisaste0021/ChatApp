@@ -6,6 +6,7 @@ import messageRoute from './routes/message.route.js'
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { app, server } from "./SocketIO/server.js";
+import path from 'path'
 
 dotenv.config();
 
@@ -38,6 +39,19 @@ catch(error){
 // routes
 app.use("/api/user", userRoute);
 app.use("/api/message", messageRoute);
+
+// Code For Deployment
+
+if(process.env.NODE_ENV === "production"){
+  const dirPath = path.resolve();
+
+  app.use(express.static("./Frontend/dist"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(dirPath, "./Frontend/dist", "index.html"));
+  })
+}
+
+
 
 server.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
