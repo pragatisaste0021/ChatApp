@@ -8,7 +8,7 @@ import toast from 'react-hot-toast'
 const Signup = () => {
 
     const [authUser, setAuthUser] = useAuth();
-
+    
     const {
         register,
         handleSubmit,

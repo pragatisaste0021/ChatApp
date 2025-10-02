@@ -10,7 +10,6 @@ const useSendMessage = () => {
 
 
     const sendMessage = async(message) =>{
-        console.log("Hsjhds");
         setLoading(true);
         try{
             console.log("finding the data");
