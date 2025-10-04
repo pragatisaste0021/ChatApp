@@ -14,9 +14,11 @@ export const SocketProvider = ({children}) => {
     const [onlineUsers, setOnlineUsers] = useState([]);
     const [authUser] = useAuth();
 
+    // http://localhost:4002
+
     useEffect(() => {
         if(authUser){
-            const socket = io("http://localhost:4002", {
+            const socket = io("https://chatapp-6rpn.onrender.com", {
                 query: {
                     userId: authUser.user._id
                 }
