@@ -9,7 +9,7 @@ const io = new Server(server, {
     cors: {
         origin: "https://chatapp-6rpn.onrender.com",
         methods: ["GET", "POST"],
-    }, transports: ["websocket"],
+    }, 
 })
 
 // http://localhost:3001 

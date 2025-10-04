@@ -22,7 +22,8 @@ export const SocketProvider = ({children}) => {
                 // query: {
                 //     userId: authUser.user._id
                 // }
-                auth: { userId: authUser.user._id }
+                auth: { userId: authUser.user._id },
+                transports: ["websocket"]
             })
             console.log("dfdfd " + authUser.user._id);
             setSocket(socket);
