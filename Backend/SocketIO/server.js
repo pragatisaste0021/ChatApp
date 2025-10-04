@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
 
     if(userId){
         users[userId] = socket.id;
-        console.log("Users", users);j
+        console.log("Users", users);
     }
 
     // Used to send the events to all the connected users
