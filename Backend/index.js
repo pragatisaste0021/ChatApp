@@ -13,9 +13,11 @@ dotenv.config();
 // middleware
 app.use(express.json());
 
+// http://localhost:5173
+
 app.use(cors(
   {
-    origin: 'http://localhost:5173',  // Allow your frontend domain
+    origin: 'https://chatapp-6rpn.onrender.com',  // Allow your frontend domain
     credentials: true,
   }
 ));
