@@ -9,7 +9,7 @@ const io = new Server(server, {
     cors: {
         origin: "https://chatapp-6rpn.onrender.com",
         methods: ["GET", "POST"],
-    }
+    }, transports: ["websocket"],
 })
 
 // http://localhost:3001 
@@ -27,7 +27,7 @@ const users = {};
 io.on("connection", (socket) => {
     console.log("A user connected", socket.id);
 
-    const userId = socket.handshake.query.ujserId;
+    const userId = socket.handshake.query.userId;
 
     if(userId){
         users[userId] = socket.id;
