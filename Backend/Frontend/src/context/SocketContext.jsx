@@ -19,9 +19,10 @@ export const SocketProvider = ({children}) => {
     useEffect(() => {
         if(authUser){
             const socket = io("https://chatapp-6rpn.onrender.com", {
-                query: {
-                    userId: authUser.user._id
-                }
+                // query: {
+                //     userId: authUser.user._id
+                // }
+                auth: { userId: authUser.user._id }
             })
             console.log("dfdfd " + authUser.user._id);
             setSocket(socket);

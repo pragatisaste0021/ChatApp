@@ -27,7 +27,7 @@ const users = {};
 io.on("connection", (socket) => {
     console.log("A user connected", socket.id);
 
-    const userId = socket.handshake.query.userId;
+    const userId = socket.handshake.auth.userId;
 
     if(userId){
         users[userId] = socket.id;
