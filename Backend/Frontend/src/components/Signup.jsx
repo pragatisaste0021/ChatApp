@@ -126,7 +126,7 @@ const Signup = () => {
                 {/* Text & Button */}
 
                 <div className='flex justify-between bg-grey-100'>
-                    <p>Have an account? <Link to = "/login" className='text-blue-500 underline cursor-pointer ml-1'>Login</Link></p>
+                    <p><span className='text-gray-100'>Have an account? </span><Link to = "/login" className='text-blue-500 underline cursor-pointer ml-1'>Login</Link></p>
                     <input type="submit" value="Signup" className='text-white bg-green-500 px-2 py-2 rounded-lg cursor-pointer'/>
                 </div>
             </form>

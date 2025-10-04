@@ -37,12 +37,12 @@ const Login = () => {
 
   return (
     <>
-        <div className='flex h-screen justify-center items-center bg-grey'>
+        <div className='flex h-screen justify-center items-center bg-gray-800'>
 
             <form action="" className='border border-black px-6 py-2 rounded-md space-y-3 w-96 bg-red' onSubmit={handleSubmit(onSubmit)}>
 
-                <h1 className='text-2xl text-center text-grey-100'>Chat <span className='text-green-500 font-semibold'>App</span></h1>
-                <h2 className='text-xl text-black font-bold'>login</h2>
+                <h1 className='text-2xl text-center text-grey-100'><span className='text-gray-100'>Chat </span><span className='text-green-500 font-semibold'>App</span></h1>
+                <h2 className='text-xl text-gray-100 font-bold'>login</h2>
 
                 {/* Input Fields */}
 
@@ -84,7 +84,7 @@ const Login = () => {
                 {/* Text & Button */}
 
                 <div className='flex justify-between'>
-                    <p>New User? <Link to = "/signup" className='text-blue-500 underline cursor-pointer ml-1'>Signup</Link></p>
+                    <p><span className='text-gray-100'>New User? </span><Link to = "/signup" className='text-blue-500 underline cursor-pointer ml-1'>Signup</Link></p>
                     <input type="submit" value="Login" className='text-white bg-green-500 px-2 py-2 rounded-lg cursor-pointer'/>
                 </div>
             </form>
